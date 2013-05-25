@@ -60,6 +60,7 @@ Following is a procedure in the terminal to compile Genfit and test code for Com
 
 3.  In tracking, hit positions after second turn are not handled by Genfit since the limit of TMAXFD = 20 degree  
     geant3/gphys/gphysi.F:725  
+
         IF (TMAXFD.LE.0..OR. (IGAUTO.NE.0.AND.TMAXFD.GT.20.)) THEN  
             TMAXFD=20.  
 
