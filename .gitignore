@@ -27,7 +27,7 @@ genfit/env.sh
 genfit/GeaneTrackRep2/Makefile
 genfit/LSLtrackRep/Makefile
 genfit/Makefile
-genfit/MakefileRKTrackRep/Makefile
+genfit/RKTrackRep/Makefile
 genfit/RKTrackRepXY/Makefile
 genfit/SlTrackRep/Makefile
 genfit/core/Makefile
@@ -45,3 +45,4 @@ genfit/genfitSlTrackRepDict.cxx
 genfit/genfitSlTrackRepDict.h
 CometPhase1/myDict.cxx
 CometPhase1/myDict.h
+CometPhase1/Makefile
