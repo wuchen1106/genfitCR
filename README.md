@@ -17,10 +17,11 @@ Following is a procedure in the terminal to compile Genfit and test code for Com
 
     $ root-config --f77                         # Check if your ROOT knows fortran compiler 
                                                   (If nothing shown, you need to install gfortran then recompile ROOT)
+                                                  ( for ArchLinux: sudo pacman -Sy gcc-fortran)
       gfortran
     $ cd genfit/geant3                          # Move to geant3 direcotry
     $ make                                      # Take a few minuites
-    $ ls lib/tgt_linuxx8664gcc/                 # On Ubuntu (64bit)
+    $ ls lib/tgt_linuxx8664gcc/                 # On 64bit Linux
       libgeant321.so
     $ ln -s lib/tgt_linuxx8664gcc lib/tgt_linux # Make symbolic link 
     $ cd ../                                    # Move to top direcotry of Genfit
@@ -29,7 +30,9 @@ Following is a procedure in the terminal to compile Genfit and test code for Com
     $ ./makeEnv.sh                              # Make env.sh, needed at every time you compile/run GENFIT
     $ source env.sh                             # Read environment for Genfit
     $ cmake .                                   # Generate Makfile for Genfit
-                                                  (If cmake is not install, do sudo apt-get install cmake)
+                                                  ( you should install cmake first )
+                                                  ( for Ubuntu: sudo apt-get install cmake )
+                                                  ( for ArchLinux: sudo pacman -Sy cmake)
     $ make
     $ ls lib/
       libgenfitGeane.so  libgenfitLSL.so  libgenfitRK.so  libgenfitRKXY.so  libgenfitSlTrackRep.so  libgenfit.so
