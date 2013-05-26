@@ -13,4 +13,35 @@
 *.a
 
 # CMake Files
+CMakeFiles/
 CMakeCache.txt
+cmake_install.cmake
+
+# compiled files
+lib/
+tgt_linuxx8664gcc/
+test/CometPhase1/main
+
+# automatically generated files\
+env.sh
+GeaneTrackRep2/Makefile
+LSLtrackRep/Makefile
+Makefile
+MakefileRKTrackRep/Makefile
+RKTrackRepXY/Makefile
+SlTrackRep/Makefile
+core/Makefile
+genfitDict.cxx
+genfitDict.h
+genfitGeaneDict.cxx
+genfitGeaneDict.h
+genfitLSLDict.cxx
+genfitLSLDict.h
+genfitRKDict.cxx
+genfitRKDict.h
+genfitRKXYDict.cxx
+genfitRKXYDict.h
+genfitSlTrackRepDict.cxx
+genfitSlTrackRepDict.h
+test/CometPhase1/myDict.cxx
+test/CometPhase1/myDict.h
