@@ -1,0 +1,38 @@
+[inwall]
+material CFRP
+first_pos 54 cm
+thickness 400 um
+
+[chamber]
+#type straw
+type drift
+first_pos 55 cm
+last_pos 80 cm
+spacing 1 cm
+#gas vacuum
+#gas ARGON-ETHANE(50,50)
+gas HELIUM-ETHANE(50,50)
+#gas HeGas
+
+[scinti]
+#material scinti
+material vacuum
+type cylinder
+#type end-cylinder
+thickness 5 mm
+first_pos 50 cm
+
+[target]
+material alumi
+type disk
+thickness 200 um
+radius 10 cm
+spacing 5 cm
+numbers 17
+center 9
+
+[solenoid]
+#material iron
+material vacuum
+type uniform
+tesla 1.0

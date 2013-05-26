@@ -12,6 +12,5 @@
 *.la
 *.a
 
-# compressed files
-*.tar.gz
-*.tgz
+# CMake Files
+CMakeCache.txt
