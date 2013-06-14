@@ -20,6 +20,7 @@
 #include "GFFieldManager.h"
 
 #include "PointHit.h"
+#include "WireHit.h"
 #include "StripHit.h"
 #include "GFTrack.h"
 #include "GFKalman.h"
@@ -1837,6 +1838,10 @@ int main(int argc, char** argv)
          TVector3 point( g_hits_det.posx[i], g_hits_det.posy[i], g_hits_det.posz[i]);
          fitTrack.addHit(
                new PointHit(point,posErr.X(),posErr.Z()),
+//               new WireHit(point,posErr.X(),posErr.Z()),
+								//where point1 is cell center at upstream plate, point2 is that at downstream plate,
+								//rdrift is drift distance, and resR is position error on rdrift.
+								//And I'm studying with resR=0.02 (cm) = 200um. 
                3,//dummy detector id
                i, // hit Id
                i, // rho
