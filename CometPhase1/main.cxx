@@ -1783,11 +1783,14 @@ int main(int argc, char** argv)
          continue;
       }
 
-      g_nhits_fit = get_nhits_for_fitting2();
+      //g_nhits_fit = get_nhits_for_fitting2(); 
+      g_nhits_fit = g_hits_det.nhits; //Seems get_nhits_for_fitting2 does not work for ROOT mode
+                                      // Should choose first loop before this reconstruction!
       printf("iev %d numhits %d numhits_fit %d\n",iev,g_hits_det.nhits,g_nhits_fit);
 
       /* Fitting will be performed when more than 3 hits in the detector */
       if (g_hits_det.nhits<3) {
+      	  //FIXME shoulbe not be 3
          //printf("iev skip fitting %d\n",iev);
          tout->Fill();
          continue;
@@ -1837,8 +1840,10 @@ int main(int argc, char** argv)
       for (int i=0; i<nhits; i++) {
          TVector3 point( g_hits_det.posx[i], g_hits_det.posy[i], g_hits_det.posz[i]);
          fitTrack.addHit(
-               new PointHit(point,posErr.X(),posErr.Z()),
+//               new PointHit(point,posErr.X(),posErr.Z()),
 //               new WireHit(point,posErr.X(),posErr.Z()),
+               new WireHit(point1,point2,rdrift,resR,bool smearing = true),
+               // FIXME how to get point1,point2? resR unit?
 								//where point1 is cell center at upstream plate, point2 is that at downstream plate,
 								//rdrift is drift distance, and resR is position error on rdrift.
 								//And I'm studying with resR=0.02 (cm) = 200um. 
